@@ -24,7 +24,7 @@ theme: jdan/cleaver-retro
 * A package, but WAY better.
 --
 ### A History of shipping
-* Ships carry many types if $THINGS
+* Ships carry many types of $THINGS
 * All shapes and sizes, wet, dry, etc
 * How to pack them all, efficently?
 * Days were spent planning and loading ships
@@ -111,15 +111,18 @@ CMD /usr/bin/supervisord -n -c /etc/supervisord.conf
 * docker-compose to bring up multiple containers together
 * Cluster/schedulers (Meos, Docker Swarm, etc)
 --
-### Live demo (ugh oh!)
---
 ### Tips
 * Keep it clean:
   * Each "RUN" is a layer. smush things together when you can. Clean up at the end of each RUN!
-* Supervisord is your friend
-  * run supervisord. have it run your $things, be it 1, or many.
-  * it can restart things 0->forever times. keeps containers from dying.
+* Remember, there is only 1 process(PID 1):
+  * it dies, your container dies.
 --
 ### Tips pt.2
   * Use Version control.
   * Use your config management to BUILD your containers, and to run them, but not IN them.
+  * Supervisord is your friend
+    * run supervisord. have it run your $things, be it 1, or many.
+    * it can restart things 0->forever times. keeps containers from dying.
+    * http://supervisord.org/
+--
+### Live demo (ugh oh!)

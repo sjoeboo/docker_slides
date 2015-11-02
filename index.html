@@ -462,7 +462,7 @@ em {
   <div class="slide hidden" id="slide-5">
     <section class="slide-content"><h3 id="a-history-of-shipping">A History of shipping</h3>
 <ul>
-<li>Ships carry many types if $THINGS</li>
+<li>Ships carry many types of $THINGS</li>
 <li>All shapes and sizes, wet, dry, etc</li>
 <li>How to pack them all, efficently?</li>
 <li>Days were spent planning and loading ships</li>
@@ -604,30 +604,35 @@ CMD /usr/bin/supervisord -n -c /etc/supervisord.conf</code></pre>
 </section>
   </div>
   <div class="slide hidden" id="slide-18">
-    <section class="slide-content"><h3 id="live-demo-ugh-oh-">Live demo (ugh oh!)</h3>
-</section>
-  </div>
-  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="tips">Tips</h3>
 <ul>
 <li>Keep it clean:<ul>
 <li>Each &quot;RUN&quot; is a layer. smush things together when you can. Clean up at the end of each RUN!</li>
 </ul>
 </li>
+<li>Remember, there is only 1 process(PID 1):<ul>
+<li>it dies, your container dies.</li>
+</ul>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-19">
+    <section class="slide-content"><h3 id="tips-pt-2">Tips pt.2</h3>
+<ul>
+<li>Use Version control.</li>
+<li>Use your config management to BUILD your containers, and to run them, but not IN them.</li>
 <li>Supervisord is your friend<ul>
 <li>run supervisord. have it run your $things, be it 1, or many.</li>
 <li>it can restart things 0-&gt;forever times. keeps containers from dying.</li>
+<li><a href="http://supervisord.org/">http://supervisord.org/</a></li>
 </ul>
 </li>
 </ul>
 </section>
   </div>
   <div class="slide hidden" id="slide-20">
-    <section class="slide-content"><h3 id="tips-pt-2">Tips pt.2</h3>
-<ul>
-<li>Use Version control.</li>
-<li>Use your config management to BUILD your containers, and to run them, but not IN them.</li>
-</ul>
+    <section class="slide-content"><h3 id="live-demo-ugh-oh-">Live demo (ugh oh!)</h3>
 </section>
   </div>
   <div class="slide hidden" id="slide-21">
