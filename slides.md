@@ -3,7 +3,7 @@ author:
   name: Matthew Nicholson
   twitter: sjoeboo
   url: http://github.com/sjoeboo
-output: slides.html
+output: index.html
 controls: true
 theme: jdan/cleaver-retro
 
