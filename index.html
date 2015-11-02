@@ -575,6 +575,24 @@ em {
 </section>
   </div>
   <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h3 id="docker-command-examples-">Docker command examples:</h3>
+<ul>
+<li><code>docker build -t some/tag:latest .</code><ul>
+<li>start a build of the Dockerfile in your current dir.</li>
+</ul>
+</li>
+<li><code>docker run -d -p 80:80 -v /data:/my_volume some/tag:latest</code><ul>
+<li>Run a container, forwarding ports and mounting a volume.</li>
+</ul>
+</li>
+<li><code>docker exec -ti container_name bash</code><ul>
+<li>get a shell in a running container</li>
+</ul>
+</li>
+</ul>
+</section>
+  </div>
+  <div class="slide hidden -" id="slide-17">
     <section class="slide-content"><h3 id="example-dockerfile">Example Dockerfile</h3>
 <pre><code>FROM sjoeboo/baseimage:latest
 MAINTAINER mattthew.a.nicholson@gmail.com
@@ -594,7 +612,7 @@ RUN /opt/puppetlabs/bin/puppet apply --modulepath=/puppet/modules/ --hiera_confi
 CMD /usr/bin/supervisord -n -c /etc/supervisord.conf</code></pre>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
+  <div class="slide hidden" id="slide-18">
     <section class="slide-content"><h3 id="advanced-features">Advanced features</h3>
 <ul>
 <li>Link containers</li>
@@ -603,7 +621,7 @@ CMD /usr/bin/supervisord -n -c /etc/supervisord.conf</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="tips">Tips</h3>
 <ul>
 <li>Keep it clean:<ul>
@@ -617,7 +635,7 @@ CMD /usr/bin/supervisord -n -c /etc/supervisord.conf</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="tips-pt-2">Tips pt.2</h3>
 <ul>
 <li>Use Version control.</li>
@@ -631,11 +649,11 @@ CMD /usr/bin/supervisord -n -c /etc/supervisord.conf</code></pre>
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><h3 id="live-demo-ugh-oh-">Live demo (ugh oh!)</h3>
 </section>
   </div>
-  <div class="slide hidden" id="slide-21">
+  <div class="slide hidden" id="slide-22">
     <section class="slide-content"><div class="author">
   <h1 class="name">Matthew Nicholson</h1>
     <h3 class="twitter">

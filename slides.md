@@ -79,13 +79,21 @@ theme: jdan/cleaver-retro
   * Runs #whatever_you_want. (run during build!)
 --
 ### DOCKERFILE: More basics
-  * EXPOSE <port>
-    * Sets up container to have a port exposed to the container host
-  * VOLUME </path>
-    * Creates mount point for data to be shared with hose at runtime.
-  * CMD <command>
-    * Defines command to run at runtime (not used in build!)
+* EXPOSE <port>
+  * Sets up container to have a port exposed to the container host
+* VOLUME </path>
+  * Creates mount point for data to be shared with hose at runtime.
+* CMD <command>
+  * Defines command to run at runtime (not used in build!)
 --
+### Docker command examples:
+* ```docker build -t some/tag:latest . ```
+  * start a build of the Dockerfile in your current dir.
+* ```docker run -d -p 80:80 -v /data:/my_volume some/tag:latest```
+  * Run a container, forwarding ports and mounting a volume.
+* ```docker exec -ti container_name bash```
+  * get a shell in a running container
+---
 ### Example Dockerfile
 ```
 FROM sjoeboo/baseimage:latest
