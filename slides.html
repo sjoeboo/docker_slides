@@ -575,6 +575,26 @@ em {
 </section>
   </div>
   <div class="slide hidden" id="slide-16">
+    <section class="slide-content"><h3 id="example-dockerfile">Example Dockerfile</h3>
+<pre><code>FROM sjoeboo/baseimage:latest
+MAINTAINER mattthew.a.nicholson@gmail.com
+EXPOSE 80
+EXPOSE 443
+RUN ln -s /opt/puppetlabs/bin/puppet /usr/local/bin/puppet
+RUN mkdir /puppet/
+ADD Puppetfile /puppet/Puppetfile
+ADD default.pp /puppet/default.pp
+ADD files/ /puppet/files
+ADD templates/ puppet/templates
+ADD hiera.yaml /puppet/hiera.yaml
+ADD hiera/  /puppet/hiera/
+WORKDIR /puppet/
+RUN /usr/local/bin/librarian-puppet install --verbose
+RUN /opt/puppetlabs/bin/puppet apply --modulepath=/puppet/modules/ --hiera_config=/puppet/hiera.yaml -v /puppet/default.pp
+CMD /usr/bin/supervisord -n -c /etc/supervisord.conf</code></pre>
+</section>
+  </div>
+  <div class="slide hidden" id="slide-17">
     <section class="slide-content"><h3 id="advanced-features">Advanced features</h3>
 <ul>
 <li>Link containers</li>
@@ -583,11 +603,11 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-17">
-    <section class="slide-content"><h3 id="example-dockerfile-live-demo-ugh-oh-">Example Dockerfile +  Live demo (ugh oh!)</h3>
+  <div class="slide hidden" id="slide-18">
+    <section class="slide-content"><h3 id="live-demo-ugh-oh-">Live demo (ugh oh!)</h3>
 </section>
   </div>
-  <div class="slide hidden" id="slide-18">
+  <div class="slide hidden" id="slide-19">
     <section class="slide-content"><h3 id="tips">Tips</h3>
 <ul>
 <li>Keep it clean:<ul>
@@ -602,7 +622,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-19">
+  <div class="slide hidden" id="slide-20">
     <section class="slide-content"><h3 id="tips-pt-2">Tips pt.2</h3>
 <ul>
 <li>Use Version control.</li>
@@ -610,7 +630,7 @@ em {
 </ul>
 </section>
   </div>
-  <div class="slide hidden" id="slide-20">
+  <div class="slide hidden" id="slide-21">
     <section class="slide-content"><div class="author">
   <h1 class="name">Matthew Nicholson</h1>
     <h3 class="twitter">
