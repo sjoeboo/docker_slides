@@ -46,23 +46,23 @@
 * Run containers.
 * Done.
 
-!SLIDE bullet incremenal
+!SLIDE bullet incremental
 
 * Your OS, becomes very generic.
 * Your application becomes self contained, very portable.
 * Want a RHEL specific app but run Ubuntu? Container!
 * Local Development!
 
-!SLIDE bullet incremenal
+!SLIDE bullet incremental
 # More uses
 
 * Clean, fast to create build environments!
-* Package data with code for reproducable jobs/runtimes
+* Package data with code for reproducible jobs/runtimes
 
 !SLIDE bullet incremental
 # Docker vs Vms
 
-* Good: Don't run the full OS, no hardwre to virtualize
+* Good: Don't run the full OS, no hardware to virtualize
 * Good: Fast. No bootup/init.
 * Bad(ish): No real init system (typically). Runs 1 process.
 * Bad: Currently requires root access/privs to launch. User daemon+containers coming soon (kernel changes)
@@ -80,7 +80,7 @@
 # Docker Hub
 
 * public+private container registry/hosting.
-* Many offical containers (apache, redis, ruby, nginx, etc)
+* Many official containers (apache, redis, ruby, nginx, etc)
 * Think github for containers!
 
 !SLIDE bullet incremental
@@ -90,7 +90,7 @@
   * Would base container on CentOS 7, pulling from a registry (default: docekr hub)
   * All layers get cached. Other containers based on this only pull needed parts.
 * RUN <some command>
-  * Runs #whatever_you_want. (run durring build!)
+  * Runs #whatever_you_want. (run during build!)
 
 !SLIDE bullet incremental
 # DOCKERFILE: More basics
@@ -122,4 +122,7 @@
   * run supervisord. have it run your $things, be it 1, or many.
   * it can restart things 0->forever times. keeps containers from dying.
 * Use Version control.
-* Use your config managment to BUILD your containers, and to run them, but not IN them.
+* Use your config management to BUILD your containers, and to run them, but not IN them.
+
+!SLIDE
+# Questions?
